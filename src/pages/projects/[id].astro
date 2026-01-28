@@ -19,8 +19,43 @@ const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title}>
+  <nav>
+    <div class="links">
+      <a href="/projects/sample" class="navLink">link</a>
+      <a href="/projects/sample" class="navLink">link</a>
+      <a href="/projects/sample" class="navLink">link</a>
+    </div>
+    <a href="../"><img class="logo" src="/Illustrate-Esports-IconLogo.png"></img></a>
+  </nav>
   <Container>
     <h1>{post.data.title}</h1>
     <Content />
   </Container>
 </Layout>
+
+<style>
+  nav{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100px;
+  }
+  .links{
+    margin: 20px;
+    align-content: center;
+  }
+  .navLink{
+    margin: 10px;
+    padding: 20px;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+  }
+  .logo{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+</style>

@@ -1,17 +1,20 @@
 ---
 import { Image } from "astro:assets";
-const link = Astro.props;
-const text = Astro.props;
+const { link } = Astro.props;
+const { type } = Astro.props;
 import type { astroCalledServerError } from "astro:actions";
 ---
 
-<a href=`/projects/${link}`>{text}</a>
+<div class="button">
+    <a href=`/projects/${link}`>{type}</a>
+</div>
 
 <style>
-    .a{
+    .button{
         padding: 50px;
         margin: 20px;
-        background-color: black;
-        color: white;
+        text-decoration: none;
+        background-color: white;
+        color: black;
     }
 </style>
