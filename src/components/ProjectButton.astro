@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+const link = Astro.props;
+const text = Astro.props;
+import type { astroCalledServerError } from "astro:actions";
+---
+
+<a href=`/projects/${link}`>{text}</a>
+
+<style>
+    .a{
+        padding: 50px;
+        margin: 20px;
+        background-color: black;
+        color: white;
+    }
+</style>
