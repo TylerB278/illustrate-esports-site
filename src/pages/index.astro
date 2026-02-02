@@ -9,8 +9,60 @@ import ProjectButton from "@components/ProjectButton.astro";
 ---
 
 <Layout title="Astro Starter">
+  <nav>
+    <a href="../"><img class="logo" src="/Illustrate-Esports-WordmarkLogo-Black.png"></img></a>
+    <div class="links">
+      <a href="/projects/sample" class="navLink">link</a>
+      <a href="/projects/sample" class="navLink">link</a>
+      <a href="/projects/sample" class="navLink">link</a>
+    </div>
+  </nav>
+  <div class="heroContain">
+    <img class="heroImg" src="/Illustrate-Esports-WordmarkLogo.png" />
+  </div>
   <Container>
-  <ProjectButton link="sample" type="sample text here"/>
-    
+    <ProjectButton link="sample" type="sample text here"/>
+
   </Container>
 </Layout>
+
+<style>
+
+  /* navigation styling */
+    nav{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100px;
+    background-color: white;
+  }
+  .links{
+    margin: 20px;
+    align-content: center;
+  }
+  .navLink{
+    padding: 20px;
+    font-size: 24px;
+    color: black;
+  }
+  .logo{
+    width: 180px;
+    margin-left: 20px;
+  }
+
+/* hero image */
+  .heroImg{
+    width: 80vw;
+    height: fit-content; 
+    max-width: 1000px;
+  }
+  .heroContain{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: black;
+  }
+</style>
