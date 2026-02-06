@@ -21,9 +21,16 @@ import ProjectButton from "@components/ProjectButton.astro";
     <img class="heroImg" src="/Illustrate-Esports-WordmarkLogo.png" />
   </div>
   <Container>
-    <ProjectButton link="sample" type="sample text here"/>
+    <ProjectButton link="sample" type="Branding & Logo Design"/>
 
   </Container>
+  <footer>
+    <div class="footLinks">
+      <a href="/projects/sample" class="fnavLink">link</a>
+      <a href="/projects/sample" class="fnavLink">link</a>
+      <a href="/projects/sample" class="fnavLink">link</a>
+    </div>
+  </footer>
 </Layout>
 
 <style>
@@ -54,6 +61,7 @@ import ProjectButton from "@components/ProjectButton.astro";
 
 /* hero image */
   .heroImg{
+    width: 80vw;
     max-width: 1500px;
   }
   .heroContain{
@@ -61,6 +69,25 @@ import ProjectButton from "@components/ProjectButton.astro";
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+  }
+
+  /* footer content */
+  footer{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    width: 100vw;
+    height: 100px;
+    background-color: var(--color-background);
+  }
+  .footLinks{
+    margin: 20px;
+    align-content: center;
+  }
+  .fnavLink{
+    color: white;
+    font-size: 24px;
   }
 </style>
