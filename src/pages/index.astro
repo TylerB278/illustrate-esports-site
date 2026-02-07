@@ -10,7 +10,7 @@ import ProjectButton from "@components/ProjectButton.astro";
 
 <Layout title="Astro Starter">
   <nav>
-    <a href="../"><img class="logo" src="/Illustrate-Esports-WordmarkLogo-Black.png"></img></a>
+    <a href="../"><img class="logo" src="/SampleLogo-White-16.png"></img></a>
     <div class="links">
       <a href="/projects/sample" class="navLink">link</a>
       <a href="/projects/sample" class="navLink">link</a>
@@ -18,7 +18,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     </div>
   </nav>
   <div class="heroContain">
-    <img class="heroImg" src="/Illustrate-Esports-WordmarkLogo.png" />
+    <img class="heroImg" src="/SampleLogo-Full-19.png" />
   </div>
   <Container>
     <ProjectButton link="sample" type="Branding & Logo Design"/>
@@ -43,7 +43,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     justify-content: space-between;
     width: 100vw;
     height: 100px;
-    background-color: white;
+    background-color: var(--color-background);
   }
   .links{
     margin: 20px;
@@ -52,11 +52,12 @@ import ProjectButton from "@components/ProjectButton.astro";
   .navLink{
     /* padding: 20px; */
     font-size: 24px;
-    color: black;
+    color: white;
   }
   .logo{
-    width: 180px;
+    width: 100px;
     margin-left: 20px;
+    padding: 5px;
   }
 
 /* hero image */
