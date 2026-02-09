@@ -6,6 +6,8 @@ import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import ProjectButton from "@components/ProjectButton.astro";
+
+
 ---
 
 <Layout title="Astro Starter">
@@ -22,8 +24,13 @@ import ProjectButton from "@components/ProjectButton.astro";
   </div>
   <Container>
     <ProjectButton link="sample" type="Branding & Logo Design"/>
-
   </Container>
+  <div class="scrollContain">
+    <a class="case"></a>
+    <a class="case"></a>
+    <a class="case"></a>
+    <a class="case"></a>
+  </div>
   <footer>
     <div class="footLinks">
       <a href="/projects/sample" class="fnavLink">link</a>
@@ -41,7 +48,6 @@ import ProjectButton from "@components/ProjectButton.astro";
     top: 0px;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
     height: 100px;
     background-color: var(--color-background);
   }
@@ -79,7 +85,6 @@ import ProjectButton from "@components/ProjectButton.astro";
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
-    width: 100vw;
     height: 100px;
     background-color: var(--color-background);
   }
@@ -90,5 +95,25 @@ import ProjectButton from "@components/ProjectButton.astro";
   .fnavLink{
     color: white;
     font-size: 24px;
+  }
+
+  .scrollContain{
+    margin-top: 50px;
+    padding-left: 7.5vw;
+    margin-bottom: 50px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    height: 50vw;
+    /* border: 10px solid var(--color-accent); */
+  }
+  .case{
+    display: inline-block;
+    scroll-snap-align: center;
+    width: 80vw;
+    height: 50vw;
+    margin-right: 25vw;
+    background-color: var(--color-accent);
   }
 </style>
