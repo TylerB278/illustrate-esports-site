@@ -30,11 +30,13 @@ import ProjectButton from "@components/ProjectButton.astro";
       <img src="/SampleLogo-Color-14.png" style="width: 300px;"></img>
     </div>
   </Container>
-  <div class="scrollContain">
+  <div id="scrollContain">
+    <div class="arrowL"></div>
+    <div class="arrowR"></div>
     <a class="case"></a>
     <a class="case"></a>
     <a class="case"></a>
-    <a class="case"></a>
+    <a class="case"></a> 
   </div>
   <footer>
     <div class="footLinks">
@@ -55,6 +57,24 @@ import ProjectButton from "@components/ProjectButton.astro";
     navbar?.classList.remove('show');
   }
 });
+
+ const arrowL = document.querySelector(".arrowL");
+ const arrowR = document.querySelector(".arrowR");
+ const scrollBox = document.getElementsByClassName(".scrollContain");
+
+ const scrollL = function () {
+    // alert("YOU'VE BEEN CLICKED!!");
+    document.getElementById('scrollContain').scrollLeft -= ((document.getElementById('scrollContain').scrollWidth)/4);
+ };
+
+ const scrollR = function () {
+    // alert("YOU'VE BEEN CLICKED!!");
+    document.getElementById('scrollContain').scrollLeft += ((document.getElementById('scrollContain').scrollWidth)/4);
+ };
+
+ arrowL?.addEventListener("click", scrollL);
+ arrowR?.addEventListener("click", scrollR);
+
 </script>
 
 <style>
@@ -67,6 +87,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     height: 100px;
     width: 100%;
     background-color: var(--color-background);
+    z-index: 100;
   }
 
   #navtop {
@@ -139,7 +160,27 @@ import ProjectButton from "@components/ProjectButton.astro";
     font-size: 24px;
   }
 
-  .scrollContain{
+  /*Scroll Content*/
+
+  .arrowL{
+    position: absolute;
+    left: 25px;
+    width: 100px;
+    height: 40vw;
+    background-color: var(--color-accent);
+    z-index: 0
+  }
+
+  .arrowR{
+    position: absolute;
+    right: 25px;
+    width: 100px;
+    height: 40vw;
+    background-color: var(--color-accent);
+    z-index: 0
+  }
+
+  #scrollContain{
     align-content: center;
     margin-top: 50px;
     padding-left: 10vw;
@@ -148,6 +189,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     height: 44vw;
     /* border: 10px solid var(--color-accent); */
   }
