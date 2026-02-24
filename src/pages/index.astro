@@ -22,7 +22,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     <img class="heroImg" src="/SampleLogo-Full-19.png" />
   </div>
   <Container>
-    <!-- <ProjectButton link="sample" type="Branding & Logo Design"/> -->
+    <!-- <ProjectButton link="event" type="Branding & Logo Design"/> -->
     <div class="intro">
       <p style="width: 500px;">Esports Visualized is a project dedicated to promoting and growing the community of Esports through graphic design and promotional material! It serves as a resource for any creatives looking to delve into the world of designing for Esports. Take a look through the many breakdowns below dedicated to designing for each different facet of Esports. We hope to encourage people to get involved and interested in this incredible industry.
       </br> To learn more about this project <a href="www.wikipedia.com">click here</a>
@@ -33,7 +33,7 @@ import ProjectButton from "@components/ProjectButton.astro";
   <div id="scrollContain">
     <div class="arrowL"> &lt </div>
     <div class="arrowR"> &gt </div>
-    <a class="case"></a>
+    <a class="case" href="/projects/event"></a>
     <a class="case"></a>
     <a class="case"></a>
     <a class="case"></a> 
@@ -168,7 +168,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     align-items: center;
     justify-content: center;
     width: 7vw;
-    height: 40vw;
+    height: 35vw;
     /* background-color: var(--color-accent); */
     border: 5px solid var(--color-accent);
     color: var(--color-accent);
@@ -188,24 +188,30 @@ import ProjectButton from "@components/ProjectButton.astro";
   #scrollContain{
     align-content: center;
     margin-top: 50px;
-    padding-left: 10vw;
+    padding-left: 20vw;
     margin-bottom: 50px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    height: 44vw;
+    height: 40vw;
     /* border: 10px solid var(--color-accent); */
   }
   .case{
     display: inline-block;
     scroll-snap-align: center;
-    width: 80vw;
-    height: 40vw;
-    margin-right: 10vw;
+    width: 70vw;
+    height: 35vw;
+    margin-right: 20vw;
     border-radius: 20px;
     border: 10px solid #ff660050;
     border-opacity: 50;
-  }
+
+    background-image: url(/SampleLogo-Full-19.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: all 0.3s;
+  } .case:hover{scale: 102%;}
 </style>
