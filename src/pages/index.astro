@@ -13,8 +13,8 @@ import ProjectButton from "@components/ProjectButton.astro";
   <nav id="navtop">
     <a href="../"><img class="logo" src="/SampleLogo-White-16.png"></img></a>
     <div class="links">
-      <a href="/projects/sample" class="navLink">link</a>
-      <a href="/projects/sample" class="navLink">link</a>
+      <a href="/projects/sample" class="navLink">About Us</a>
+      <a href="/projects/sample" class="navLink">Breakdowns</a>
       <a href="/projects/sample" class="navLink">link</a>
     </div>
   </nav>
@@ -84,7 +84,8 @@ import ProjectButton from "@components/ProjectButton.astro";
     position: fixed;
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    align-items: center;
+    height: 80px;
     width: 100%;
     background-color: var(--color-background);
     z-index: 100;
@@ -106,9 +107,11 @@ import ProjectButton from "@components/ProjectButton.astro";
     /* padding: 20px; */
     font-size: 24px;
     color: white;
-  }
+    text-decoration: none;
+    padding: 5px;
+  } .navLink:hover{ color: var(--color-accent); }
   .logo{
-    width: 100px;
+    width: 80px;
     margin-left: 20px;
     padding: 5px;
   }
