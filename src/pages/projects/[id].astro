@@ -20,7 +20,7 @@ const { Content } = await render(post);
 
 <Layout title={post.data.title}>
   <nav id="navBar">
-    <a href="../"><img class="logo" src="/SampleLogo-Color-14.png"></img></a>
+    <a href="../"><img class="logo" src="/SampleLogo-White-16.png"></img></a>
     <div class="links">
       <a href="/projects/sample" class="navLink">About Us</a>
       <a href="/projects/sample" class="navLink">Breakdowns</a>
@@ -71,15 +71,15 @@ window.onscroll = function() {
   }
   .links{
     padding: 10px;
-    background-color: var(--color-accent);
+    background-color: var(--color-background);
   }
   .navLink{
     margin: 10px;
     padding: 20px;
     font-size: 24px;
     text-decoration: none;
-    color: black;
-  } .navLink:hover{ color: var(--color-focus-ring); }
+    color: var(--color-text);
+  } .navLink:hover{ color: var(--color-accent); }
 
   .logo{
     width: 80px;
