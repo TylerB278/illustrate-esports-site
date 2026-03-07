@@ -3,6 +3,7 @@ const { props } = Astro;
 const { image } = Astro.props;
 const { alt } = Astro.props;
 const { w } = Astro.props;
+const { m } = Astro.props;
 
 import Image from "astro/components/Image.astro";
 import { getImage } from "astro:assets";
@@ -34,6 +35,7 @@ if (props.forceAspectRatio) {
 }
 
 styleAttrs.width = props.w;
+styleAttrs.margin = props.m;
 ---
 
 <script>
@@ -51,7 +53,7 @@ styleAttrs.width = props.w;
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: scale 0.3s
+    transition: scale 0.3s;
   }
   .image-popout:hover{
     scale: 98%;

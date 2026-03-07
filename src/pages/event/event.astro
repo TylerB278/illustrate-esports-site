@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import ImagePopout from "@components/ImagePopout.astro";
+import Gap from "@components/Gap.astro";
 
 import Thumb from './thumbnail.png';
 
@@ -19,7 +20,7 @@ import Thumb from './thumbnail.png';
   </nav>
   <div class="page-contain">
     <div class="text-contain">
-      <h1>Event Design</h1>
+      <h1 class="header">Event Design</h1>
       <div class="textgroup">
         <h2>What is Event Design</h2>
         <p>What is Event Design What is Event Design What is Event Design What is Event Design What is Event Design</p>
@@ -28,7 +29,8 @@ import Thumb from './thumbnail.png';
       <p>What is Event Design What is Event Design What is Event Design What is Event Design What is Event Design</p>
     </div>
     <div class="image-contain">
-      <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
+      <!-- <Gap h="400px" /> -->
+      <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>    
       <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
       <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
       <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
@@ -94,19 +96,31 @@ window.onscroll = function() {
   .page-contain{
     display: grid;
     align-items: top;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 550px 1fr;
     margin: var(--size-page-margin) 0;
   }
   .text-contain{
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    gap: 8rem;
     background-color: var(--color-background);
     height: 100%;
     padding: 3rem;
+    padding-top: 8rem;
   }
   .image-contain{
-    border: 5px solid var(--color-accent);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    border-left: 5px solid var(--color-accent);
+    height: 300vh;
+  }
+
+  .header{
+    font-size: 48pt;
+    font-weight: 800;
   }
 </style>
