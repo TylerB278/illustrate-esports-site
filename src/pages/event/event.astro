@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import ImagePopout from "@components/ImagePopout.astro";
+import MultiCol from "@components/MultiCol.astro";
 import Gap from "@components/Gap.astro";
 
 import Thumb from './thumbnail.png';
@@ -34,6 +35,10 @@ import Thumb from './thumbnail.png';
       <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
       <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
       <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
+      <MultiCol>
+        <ImagePopout image={Thumb} alt="image test" w="40%" galleryID="2"/>
+        <ImagePopout image={Thumb} alt="image test" w="40%" galleryID="2"/>
+      </MultiCol>
     </div>
   </div>
 </Layout>
