@@ -5,7 +5,7 @@ const { alt } = Astro.props;
 const { w } = Astro.props;
 const { m } = Astro.props;
 
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets"
 import { getImage } from "astro:assets";
 
 import "glightbox/dist/css/glightbox.min.css";
