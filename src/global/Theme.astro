@@ -6,6 +6,14 @@ import "@fontsource/karla";
 
 <style is:global>
   /* We can use this style tag to set up colors, fonts, etc. */
+  @font-face {
+    font-family: Minstrel; /* set name */
+    src: url(MinstrelPoster.woff); /* url of the font */
+    
+    font-weight: normal;
+    font-style: normal;
+  }
+
   :root {
     --color-background: #0F0021;
     --color-text: #FFF;
@@ -39,9 +47,10 @@ import "@fontsource/karla";
   h4,
   h5,
   h6 {
+    font-weight: 800;
     color: var(--color-accent);
   }
-
+  
   /* default focus ring styles */
   *:focus-visible {
     outline: 3px solid var(--color-focus-ring);

@@ -20,6 +20,12 @@ import mhmL from './mhm-long.png';
 import mhmD from './mhmD.png';
 import Station from './station.png';
 import CheckIn from './checkIn.png';
+import p1 from './photo1.png';
+import p2 from './photo2.png';
+import p3 from './photo3.png';
+import p4 from './photo4.png';
+import p5 from './photo5.png';
+import p6 from './photo6.png';
 import SkipLink from "@components/SkipLink.astro";
 
 ---
@@ -170,7 +176,14 @@ import SkipLink from "@components/SkipLink.astro";
           both take a long time to run and have difficulty conveying to wide audiences which is why design is ever so crucial here. You can see below an album of a few photos I took to document all of these designs in action!
         </p>
       </div>
-
+      <MultiCol>
+        <ImagePopout image={p1} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={p2} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={p3} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={p4} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={p5} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={p6} alt="image test" w="400px" galleryID="1"/>
+      </MultiCol>
   </div>
 </Layout>
 
@@ -249,6 +262,7 @@ window.onscroll = function() {
     max-width: 1200px;
   }
   .content-contain p { max-width: 800px; }
+  .textgroup h2 { color: var(--color-text); font-family: var(--font-headings);}
   .gallery-contain{
     width: 800px;
     padding: 1rem;
