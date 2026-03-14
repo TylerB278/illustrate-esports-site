@@ -5,6 +5,8 @@ import Layout from "@layouts/Layout.astro";
 import ImagePopout from "@components/ImagePopout.astro";
 import MultiCol from "@components/MultiCol.astro";
 import Gap from "@components/Gap.astro";
+import Nav from "@components/Nav.astro"
+import Footer from "@components/Footer.astro"
 
 import Thumb from './thumbnail.png';
 import Gallery from './gallery.png';
@@ -34,14 +36,7 @@ import SkipLink from "@components/SkipLink.astro";
 ---
 
 <Layout title= "Event Design">
-  <nav id="navBar">
-    <a href="https://illustrate-esports.netlify.app/"><img class="logo" src="/SampleLogo-White-16.png"></img></a>
-    <div class="links">
-      <a href="/projects/sample" class="navLink">About Us</a>
-      <a href="/projects/sample" class="navLink">Breakdowns</a>
-    </div>
-  </nav>
-
+  <Nav />
   <div id="gallery">
     <ImagePopout image={Gallery} alt="Opener for the image gallery" w="400px" galleryID="1"/>
   </div>
@@ -187,64 +182,13 @@ import SkipLink from "@components/SkipLink.astro";
         <ImagePopout image={p6} alt="Photo from the event #6" w="400px" galleryID="1"/>
       </MultiCol>
   </div>
+  <Footer />
 </Layout>
 
 <script>
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-
-var scrollTimeout
-
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navBar").style.top = "0";
-  } else {
-      document.getElementById("navBar").style.top = "-100px";
-  }
-
-  // Event buffering here
-  clearTimeout(scrollTimeout)
-  scrollTimeout = setTimeout(function(){
-    prevScrollpos = currentScrollPos;
-  },2) // This delay may need adjustment...
-}
-
 </script>
 
 <style>
-
-  #navBar{ transition: top 0.5s; }
-  nav{
-    position: fixed;
-    top: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    z-index: 1000;
-  }
-  .links{
-    padding: 10px;
-    background-color: var(--color-background);
-  }
-  .navLink{
-    margin: 10px;
-    padding: 20px;
-    font-size: 24px;
-    text-decoration: none;
-    color: var(--color-text);
-  } .navLink:hover{ color: var(--color-accent); }
-
-  .logo{
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   .page-contain{
     display: grid;
     align-items: top;

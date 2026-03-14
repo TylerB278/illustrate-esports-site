@@ -6,6 +6,7 @@ import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Assets } from "astro:assets";
 import ProjectButton from "@components/ProjectButton.astro";
+import Footer from "@components/Footer.astro"
 
 ---
 
@@ -13,7 +14,7 @@ import ProjectButton from "@components/ProjectButton.astro";
   <nav id="navtop">
     <a href="../"><img class="logo" src="/SampleLogo-White-16.png"></img></a>
     <div class="links">
-      <a href="/projects/sample" class="navLink">About Us</a>
+      <a href="/about" class="navLink">About Us</a>
       <a href="/projects/sample" class="navLink">Breakdowns</a>
       <a href="/projects/sample" class="navLink">link</a>
     </div>
@@ -24,10 +25,9 @@ import ProjectButton from "@components/ProjectButton.astro";
   <Container>
     <!-- <ProjectButton link="event" type="Branding & Logo Design"/> -->
     <div class="intro">
-      <p style="width: 500px;">Esports Visualized is a project dedicated to promoting and growing the community of Esports through graphic design and promotional material! It serves as a resource for any creatives looking to delve into the world of designing for Esports. Take a look through the many breakdowns below dedicated to designing for each different facet of Esports. We hope to encourage people to get involved and interested in this incredible industry.
-      </br> To learn more about this project <a href="www.wikipedia.com">click here</a>
+      <p>Esports Visualized is a project dedicated to promoting and growing the community of Esports through graphic design and promotional material! It serves as a resource for any creatives looking to delve into the world of designing for Esports. Take a look through the many breakdowns below dedicated to designing for each different facet of Esports. We hope to encourage people to get involved and interested in this incredible industry.
+      </br> To learn more about this project <a href="/about">click here</a>
       </br> To learn more about what Esports is <a href="www.wikipedia.com">click here</a></p>
-      <img src="/SampleLogo-Color-14.png" style="width: 300px;"></img>
     </div>
   </Container>
   <div id="scrollContain">
@@ -37,13 +37,7 @@ import ProjectButton from "@components/ProjectButton.astro";
     <a class="case"></a>
     <a class="case"></a>
   </div>
-  <footer>
-    <div class="footLinks">
-      <a href="/projects/sample" class="fnavLink">link</a>
-      <a href="/projects/sample" class="fnavLink">link</a>
-      <a href="/projects/sample" class="fnavLink">link</a>
-    </div>
-  </footer>
+  <Footer />
 </Layout>
 
 <script>
@@ -141,25 +135,6 @@ import ProjectButton from "@components/ProjectButton.astro";
   }
   .intro a:visited{ color: var(--color-focus-ring); }
   .intro a:visited:hover{ background-color: var(--color-focus-ring); color: var(--color-accent);}
-
-  /* footer content */
-  footer{
-    position: sticky;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-    height: 100px;
-    background-color: var(--color-background);
-  }
-  .footLinks{
-    margin: 20px;
-    align-content: center;
-  }
-  .fnavLink{
-    color: white;
-    font-size: 24px;
-  }
 
   /*Scroll Content*/
 
