@@ -7,6 +7,7 @@ import MultiCol from "@components/MultiCol.astro";
 import Gap from "@components/Gap.astro";
 
 import Thumb from './thumbnail.png';
+import Gallery from './gallery.png';
 import Banner from './banner.png';
 import Icon from './icon.png';
 import Brb from './brb.png';
@@ -15,6 +16,8 @@ import Poster from './poster.png';
 import SF6 from './sf6-top8.png';
 import T8 from './t8-top8.png';
 import Stream from './stream.png';
+import StreamScreen from './stream-screen.png';
+import TSH from './tsh-example.png';
 import mhmI from './mhm-icon.png';
 import mhmL from './mhm-long.png';
 import mhmD from './mhmD.png';
@@ -40,11 +43,11 @@ import SkipLink from "@components/SkipLink.astro";
   </nav>
 
   <div id="gallery">
-    <ImagePopout image={Thumb} alt="image test" w="400px" galleryID="1"/>
+    <ImagePopout image={Gallery} alt="Opener for the image gallery" w="400px" galleryID="1"/>
   </div>
 
   <div class="content-contain">
-    <ImagePopout image={Thumb} alt="image test" w="100%" galleryID="1"/>
+    <ImagePopout image={Thumb} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
     <div class="textgroup">
       <h1 class="header">Event Design</h1>
       <p>
@@ -75,8 +78,8 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={mhmI} alt="image test" w="300px" galleryID="1"/>
-        <ImagePopout image={mhmL} alt="image test" w="500px" galleryID="1"/>
+        <ImagePopout image={mhmI} alt="Mid Hudson Mayhem's icon logo" w="300px" galleryID="3"/>
+        <ImagePopout image={mhmL} alt="Mid Hudson Mayhem's wordmark logo" w="500px" galleryID="3"/>
       </MultiCol>
       <div class="textgroup">
         <p>
@@ -92,7 +95,7 @@ import SkipLink from "@components/SkipLink.astro";
           I used the fist as it is a common and easy to understand symbol among the Fighting Game Community. Small allusions like this make for easy to understand and distinguish from other Esports designs.
         </p> 
       </div>
-      <ImagePopout image={Logo} alt="image test" w="500px" galleryID="1"/>
+      <ImagePopout image={Logo} alt="Logo for the First to Fund event" w="500px" galleryID="1"/>
       <div class="textgroup">
         <h2>Advertisement</h2>
         <p>
@@ -110,8 +113,8 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={Icon} alt="image test" w="300px" galleryID="1"/>
-        <ImagePopout image={Banner} alt="image test" w="500px" galleryID="1"/>
+        <ImagePopout image={Icon} alt="Tournament site Icon" w="300px" galleryID="1"/>
+        <ImagePopout image={Banner} alt="Tournament site Banner" w="500px" galleryID="1"/>
       </MultiCol>
       <div class="textgroup">
         <h2>On Site</h2>
@@ -121,9 +124,9 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={mhmD} alt="image test" w="200px" galleryID="1"/>
-        <ImagePopout image={CheckIn} alt="image test" w="300px" galleryID="1"/>
-        <ImagePopout image={Station} alt="image test" w="300px" galleryID="1"/>
+        <ImagePopout image={mhmD} alt="Donation flyer for Mid Hudson Mayhem" w="200px" galleryID="1"/>
+        <ImagePopout image={CheckIn} alt="Check in desk flyer" w="300px" galleryID="1"/>
+        <ImagePopout image={Station} alt="Station marker for event layout" w="300px" galleryID="1"/>
       </MultiCol>
       <div class="textgroup">
         <p>
@@ -134,8 +137,8 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={Stream} alt="image test" w="500px" galleryID="1"/>
-        <ImagePopout image={Stream} alt="image test" w="500px" galleryID="1"/>
+        <ImagePopout image={Stream} alt="Stream layout to be overlayed on stream" w="800px" galleryID="1"/>
+        <ImagePopout image={StreamScreen} alt="In-use example of the stream layout" w="800px" galleryID="1"/>
       </MultiCol>
       <div class="textgroup">
         <p>
@@ -144,15 +147,14 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={Stream} alt="image test" w="500px" galleryID="1"/>
-        <ImagePopout image={Stream} alt="image test" w="500px" galleryID="1"/>
+        <ImagePopout image={TSH} alt="Behind the scenes for the stream layout setup" w="800px" galleryID="1"/>
       </MultiCol>
       <div class="textgroup">
         <p>
           Aside from this I also added a “Be Right Back” scene that allows us to transition between games more smoothly.
         </p>
       </div>
-      <ImagePopout image={Brb} alt="image test" w="700px" galleryID="1"/>
+      <ImagePopout image={Brb} alt="Be right back screen for the stream" w="700px" galleryID="1"/>
       <div class="textgroup">
         <h2>Post-Event</h2>
         <p>
@@ -161,8 +163,8 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={SF6} alt="image test" w="400px" galleryID="1"/>
-        <ImagePopout image={T8} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={SF6} alt="Top 8 graphic for Street Fighter 6" w="400px" galleryID="1"/>
+        <ImagePopout image={T8} alt="Top 8 graphic for Tekken 8" w="400px" galleryID="1"/>
       </MultiCol>
       <div class="textgroup">
         <h2>Outcome</h2>
@@ -177,12 +179,12 @@ import SkipLink from "@components/SkipLink.astro";
         </p>
       </div>
       <MultiCol>
-        <ImagePopout image={p1} alt="image test" w="400px" galleryID="1"/>
-        <ImagePopout image={p2} alt="image test" w="400px" galleryID="1"/>
-        <ImagePopout image={p3} alt="image test" w="400px" galleryID="1"/>
-        <ImagePopout image={p4} alt="image test" w="400px" galleryID="1"/>
-        <ImagePopout image={p5} alt="image test" w="400px" galleryID="1"/>
-        <ImagePopout image={p6} alt="image test" w="400px" galleryID="1"/>
+        <ImagePopout image={p1} alt="Photo from the event #1" w="400px" galleryID="1"/>
+        <ImagePopout image={p2} alt="Photo from the event #2" w="400px" galleryID="1"/>
+        <ImagePopout image={p3} alt="Photo from the event #3" w="400px" galleryID="1"/>
+        <ImagePopout image={p4} alt="Photo from the event #4" w="400px" galleryID="1"/>
+        <ImagePopout image={p5} alt="Photo from the event #5" w="400px" galleryID="1"/>
+        <ImagePopout image={p6} alt="Photo from the event #6" w="400px" galleryID="1"/>
       </MultiCol>
   </div>
 </Layout>
