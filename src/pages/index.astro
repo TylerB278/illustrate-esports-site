@@ -6,36 +6,44 @@ import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Assets } from "astro:assets";
 import ProjectButton from "@components/ProjectButton.astro";
+import StaticGraphic from "@components/StaticGraphic.astro";
 import Footer from "@components/Footer.astro"
+import Star1 from "@assets/images/starHeader1.png"
+import Star2 from "@assets/images/starHeader2.png"
 
 ---
 
 <Layout title="Esports Visualized">
-  <nav id="navtop">
+  <!-- <nav id="navtop">
     <a href="../"><img class="logo" src="/NavWhite.png"></img></a>
     <div class="links">
       <a href="/about" class="navLink">About</a>
       <a href="/projects/sample" class="navLink">Breakdowns</a>
     </div>
-  </nav>
+  </nav> -->
   <div class="heroContain">
     <img class="heroImg" src="/MainLogo.png" />
   </div>
+  <div class="pageButtons">
+    <a class="button">About the Project</a>
+    <a class="button">Explorations</a>
+  </div>
+  <StaticGraphic i1={Star1} i2={Star2} l="100px" t="50px" w="8vw"/>
   <Container>
     <!-- <ProjectButton link="event" type="Branding & Logo Design"/> -->
-    <div class="intro">
+    <!-- <div class="intro">
       <p>Esports Visualized is a project dedicated to promoting and growing the community of Esports through graphic design and promotional material! It serves as a resource for any creatives looking to delve into the world of designing for Esports. Take a look through the many breakdowns below dedicated to designing for each different facet of Esports. We hope to encourage people to get involved and interested in this incredible industry.
       </br> To learn more about this project <a href="/about">click here</a>
       </br> To learn more about what Esports is <a href="www.wikipedia.com">click here</a></p>
-    </div>
+    </div> -->
   </Container>
-  <div id="scrollContain">
+  <!-- <div id="scrollContain">
     <div class="arrowL"> &lt </div>
     <div class="arrowR"> &gt </div>
     <a class="case" href="/event/event" style="background-image: url(/EventCase-Cover.png); border: none;"></a>
     <a class="case"></a>
     <a class="case"></a>
-  </div>
+  </div> -->
   <Footer />
 </Layout>
 
@@ -110,14 +118,29 @@ import Footer from "@components/Footer.astro"
 
 /* hero image */
   .heroImg{
+    position: absolute;
+    top: 20vh;
     width: 80vw;
-    max-width: 1500px;
+    max-width: 1000px;
   }
   .heroContain{
-    height: 100vh;
+    height: 71vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  /* About & Case Study Buttons  */
+  .pageButtons{
+    display: flex;
+    position: absolute;
+    bottom: 20vh;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .button{
+    font-size: 32pt;
   }
 
   /*Center Content*/
