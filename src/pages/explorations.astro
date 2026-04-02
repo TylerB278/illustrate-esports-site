@@ -1,0 +1,102 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SampleComponent from "@components/SampleComponent.astro";
+import Container from "@components/Container.astro";
+import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
+import { Content as SampleMarkdown } from "@content/sample-markdown.md";
+import { Assets } from "astro:assets";
+import Image from "astro/components/Image.astro";
+
+import Logo from './MainLogo.png';
+import Event from '@assets/images/EventCase-Cover.png';
+import EventText from '@assets/images/eventText.png';
+
+import ImagePopout from "@components/ImagePopout.astro";
+
+
+import Nav from "@components/Nav.astro"
+import Footer from "@components/Footer.astro"
+import ProjectButton from "@components/ProjectButton.astro";
+
+---
+
+<Layout title="Esports Visualized">
+  <Nav />
+  <div class="fullBG"></div>
+  <div class="caseFlex">
+    <a class="caseBox event" href="/event/event">
+      <Image alt="" class="background" src={EventText} />
+      <Image alt="" class="overlay" src={Event} />
+    </a>
+    <div class="caseBox">
+      <Image alt="" class="background" src={EventText} />
+      <Image alt="" class="overlay" src={Event} />
+    </div>
+    <div class="caseBox">
+      <Image alt="" class="background" src={EventText} />
+      <Image alt="" class="overlay" src={Event} />
+    </div>
+  </div>
+  <Container>
+
+  </Container>
+  <Footer />
+</Layout>
+
+<script></script>
+
+<style>
+
+.fullBG{
+  position: fixed;
+  top: 0;
+  opacity: 0%;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.caseFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 170px;
+  /* border: 5px solid red; */
+}
+
+.caseBox{
+  position: relative;
+  max-width: 800px;
+  /* border: 5px solid white; */
+  transition: all 0.5s;
+
+}
+
+.background{
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+  transition: all 0.2s;
+}
+
+.overlay{
+  background-origin: center;
+  transform-origin: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 80%;
+  z-index: -100;
+  transform: scale(0%);
+  transition: all 0.4s;
+}
+
+.caseBox:hover .background{ scale: 120%; }
+.caseBox:hover .overlay{ transform: scale(100%); }
+
+.caseBox:hover .fullBG{ opacity: 100%; }
+
+</style>

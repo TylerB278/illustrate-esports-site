@@ -10,6 +10,8 @@ import StaticGraphic from "@components/StaticGraphic.astro";
 import Footer from "@components/Footer.astro"
 import Star1 from "@assets/images/starHeader1.png"
 import Star2 from "@assets/images/starHeader2.png"
+import Brush1 from "@assets/images/ovalBrush1.png"
+import Brush2 from "@assets/images/ovalBrush2.png"
 
 ---
 
@@ -25,8 +27,8 @@ import Star2 from "@assets/images/starHeader2.png"
     <img class="heroImg" src="/MainLogo.png" />
   </div>
   <div class="pageButtons">
-    <a class="button">About the Project</a>
-    <a class="button">Explorations</a>
+    <a class="button" href="/about">About the Project</a>
+    <a class="button" href="/explorations">Explorations</a>
   </div>
   <StaticGraphic i1={Star1} i2={Star2} l="100px" t="50px" w="8vw"/>
   <Container>
@@ -133,15 +135,19 @@ import Star2 from "@assets/images/starHeader2.png"
   /* About & Case Study Buttons  */
   .pageButtons{
     display: flex;
-    position: absolute;
-    bottom: 20vh;
+    position: relative;
+    bottom: 0vh;
     width: 100%;
     justify-content: space-around;
   }
 
   .button{
     font-size: 32pt;
-  }
+    font-weight: 800;
+    padding: 20px;
+    color: var(--color-accent);
+    text-decoration: none;
+  } .button:hover{ outline: 5px solid var(--color-accent); }
 
   /*Center Content*/
   .intro{
