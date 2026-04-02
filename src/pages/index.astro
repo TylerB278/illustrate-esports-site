@@ -12,6 +12,8 @@ import Star1 from "@assets/images/starHeader1.png"
 import Star2 from "@assets/images/starHeader2.png"
 import Brush1 from "@assets/images/ovalBrush1.png"
 import Brush2 from "@assets/images/ovalBrush2.png"
+import Crown1 from "@assets/images/crownHeader1.png"
+import Crown2 from "@assets/images/crownHeader2.png"
 
 ---
 
@@ -31,6 +33,7 @@ import Brush2 from "@assets/images/ovalBrush2.png"
     <a class="button" href="/explorations">Explorations</a>
   </div>
   <StaticGraphic i1={Star1} i2={Star2} l="100px" t="50px" w="8vw"/>
+  <StaticGraphic i1={Crown1} i2={Crown2} r="100px" t="150px" w="12vw"/>
   <Container>
     <!-- <ProjectButton link="event" type="Branding & Logo Design"/> -->
     <!-- <div class="intro">
@@ -149,6 +152,15 @@ import Brush2 from "@assets/images/ovalBrush2.png"
     text-decoration: none;
   } .button:hover{ outline: 5px solid var(--color-accent); }
 
+  @media (max-width: 750px){
+    .pageButtons{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      bottom: 5vh;
+    }
+  }
   /*Center Content*/
   .intro{
     display: flex;
