@@ -3,13 +3,16 @@ import Image from "astro/components/Image.astro";
 import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import ImagePopout from "@components/ImagePopout.astro";
+import StaticGraphic from "@components/StaticGraphic.astro";
 import MultiCol from "@components/MultiCol.astro";
 import Gap from "@components/Gap.astro";
 import Nav from "@components/Nav.astro"
 import Footer from "@components/Footer.astro"
 
 import Thumb from './thumbnail.png';
-import Gallery from './gallery.png';
+import Gallery from '@assets/images/galleryText.png';
+import GalBG1 from "@assets/images/gallery1.png"
+import GalBG2 from "@assets/images/gallery2.png"
 import Banner from './banner.png';
 import Icon from './icon.png';
 import Brb from './brb.png';
@@ -38,7 +41,19 @@ import SkipLink from "@components/SkipLink.astro";
 <Layout title= "Event Design">
   <Nav />
   <div id="gallery">
-    <ImagePopout image={Gallery} alt="Opener for the image gallery" w="400px" galleryID="1"/>
+    <ImagePopout 
+      image={Gallery} 
+      alt="Opener for the image gallery" 
+      w="300px" 
+      galleryID="1"
+    />
+    <StaticGraphic 
+      i1={GalBG1} 
+      i2={GalBG2} 
+      b="70px" 
+      r="80px" 
+      w="180px"
+    />
   </div>
 
   <div class="content-contain">
@@ -190,16 +205,17 @@ import SkipLink from "@components/SkipLink.astro";
 
 <style>
   .page-contain{
-    display: grid;
+    display: flex;
     align-items: top;
-    grid-template-columns: 650px 1fr;
+    /* grid-template-columns: 650px 1fr; */
+    justify-content: center;
     margin: var(--size-page-margin) 0;
   }
   .content-contain{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-evenly; */
+    justify-self: center;
     gap: 3rem;
     background-color: var(--color-background);
     height: 100%;
@@ -218,11 +234,23 @@ import SkipLink from "@components/SkipLink.astro";
     position: fixed;
     padding: 1rem;
     right: 40px;
-    bottom: 100px;
+    bottom: 0px;
     z-index: 1000;
   }
   .header{
     font-size: 48pt;
     font-weight: 800;
+  }
+
+  @media (max-width: 800px) {
+    #gallery{
+      transform: scale(60%) translateX(120px) translateY(100px);
+    }
+    p{
+      font-size: 12pt;
+    }
+    .content-contain{
+      padding: 1rem;
+    }
   }
 </style>

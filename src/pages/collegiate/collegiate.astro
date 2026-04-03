@@ -1,0 +1,217 @@
+---
+import Image from "astro/components/Image.astro";
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import ImagePopout from "@components/ImagePopout.astro";
+import StaticGraphic from "@components/StaticGraphic.astro";
+import MultiCol from "@components/MultiCol.astro";
+import Gap from "@components/Gap.astro";
+import Nav from "@components/Nav.astro"
+import Footer from "@components/Footer.astro"
+
+import Thumb from './thumbnail.png';
+import NPEsportsI1 from './npesports-iteration1.png';
+import NPEsportsLogo from './npesports-logo.png';
+import NPEsportsIcon from './npesports-icon.png';
+import UAarena from './ualbany-arena.jpg';
+import UAstream from './ualbany-stream.png';
+import Gallery from '@assets/images/galleryText.png';
+import GalBG1 from "@assets/images/gallery1.png"
+import GalBG2 from "@assets/images/gallery2.png"
+
+import SkipLink from "@components/SkipLink.astro";
+
+---
+
+<Layout title= "Collegiate Design">
+  <Nav />
+  <div id="gallery">
+    <ImagePopout 
+      image={Gallery} 
+      alt="Opener for the image gallery" 
+      w="300px" 
+      galleryID="1"
+    />
+    <StaticGraphic 
+      i1={GalBG1} 
+      i2={GalBG2} 
+      b="70px" 
+      r="80px" 
+      w="180px"
+    />
+  </div>
+
+  <div class="content-contain">
+    <ImagePopout image={Thumb} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
+    <div class="textgroup">
+      <h1 class="header">Collegiate Design</h1>
+      <p>
+        While a lot of Esports’ design comes from grassroots communitiesor big team-centered organizations,
+        it’s also important to talk about where people often start their Esports journeys, the collegiate scene!
+        The reason I talk about this as its own section is that there are a lot of unique challenges faced
+        when designing for collegiate Esports that are similar to how the other two case studies provide unique challenges.
+      </p>
+    </div>
+      <div class="textgroup">
+        <h2>Talking with a Director</h2>
+        <p>
+          Considering that collegiate Esports is often many people’s first entryway into the Esports scene,
+          it’s important to use clever and strong design to help the onboard of potential students.
+          But what you may not expect is that designing in the collegiate scene often results in unique challenges you may not expect.
+          I have my own experience designing for this field but instead of hearing it from me why don't I introduce you to John Macone,
+          current director of Esports at UAlbany. He has been working for Esports and even done graphic design for several school’s
+          programs for over a decade! I interviewed him on his experience designing for the collegiate scene and beyond.
+          So why not hear about these challenges from him in the video below:
+        </p>
+      </div>
+      <iframe 
+        width="1080"
+        height="720"
+        src="https://www.youtube.com/embed/HqMFFRho_ik"
+        class="yt-video"
+        title="Interview with John Macone - Esports Visualized" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+
+      <div class="textgroup">
+        <p>
+          From this interview along with my own experience I could see similar issues often popping up.
+          Oftentimes Esports is never given a direct label by colleges and this has led to the treatment of it being
+          very dependent on the college it is located at. This means that Esports can be treated anywhere from a department
+          of the school to a student club, and this drastically affects the liberties that designers for these spaces have.
+          Most schools have some defined format for how their sports obtain their branding,
+          typically in the form of their marketing department making it for them. With Esports though it is quite the opposite,
+          leaving most schools/programs out to dry to form their own branding.
+          On top of that most schools have direct restrictions on how the student body can use their logos, fonts, and even potentially colors.
+          This leaves designers with very few options when trying to make branding for an Esports program that is intended to directly represent their school. 
+        </p>
+      </div>
+      <div class="textgroup">
+        <h2>Collegiate Restrictions</h2>
+        <p>
+          But contrary to what it seems, these restrictions have served to give Esports a more unique and distinct brand style in the collegiate scene!
+          Let's start by showing an example of school-backed programs that deal with these restrictions,
+          as talked about in the interview I’d like to highlight University at Albany’s program. With UAlbany their logo for Esports is more standard and traditionally athletic.
+          A lot of their brand identity comes from what is around the logo. This is visible more so on something like their Twitch stream’s graphics.
+        </p>
+      </div>
+      <MultiCol>
+        <ImagePopout image={UAstream} alt="Mid Hudson Mayhem's icon logo" w="800px" galleryID="1"/>
+      </MultiCol>
+      <div class="textgroup">
+        <p>
+          Here they take the same logo but apply a brand style more unique to their direct program.
+          They make use of a more sketched look with bold stripes to set their program apart from other sports programs that all use the same University branding.
+          This allows their program and their in-person arena (visualized below) to stand out as its own distinct organization on campus.
+        </p>
+      </div>
+      <MultiCol>
+        <ImagePopout image={UAarena} alt="Mid Hudson Mayhem's icon logo" w="700px" galleryID="1"/>
+      </MultiCol>
+      <div class="textgroup">
+        <h2>New Paltz Esports</h2>
+        <p>
+          So then how would somebody work from the ground up to make a college’s collegiate Esports branding with the heavy restrictions
+          that would come from an even tighter, student club environment. That is an experience that I had to find out for SUNY New Paltz’s Esports program
+          so let me highlight how I tackled these restrictions. Since this is something I worked with the departments at New Paltz for
+          I can discuss what the specific restrictions were here. For this project I was required to follow the SUNY New Paltz Style Guide.
+          In essence, I could use only New Paltz’s two main fonts, their small color palette, and very restricted use of their athletic logo.
+          These are very big restrictions and drastically affect how much liberty I had over the design. You can see here two of my initial iterations I had made before getting news of my restrictions.
+        </p>
+      </div>
+      <MultiCol>
+        <ImagePopout image={NPEsportsI1} alt="Concept 1 for the New Paltz Esports logo" w="400px" galleryID="1"/>
+        <ImagePopout image={NPEsportsI1} alt="Concept 2 for the New Paltz Esports logo" w="400px" galleryID="1"/>
+      </MultiCol>
+      <div class="textgroup">
+        <p>
+          This is the initial vision I had for the program with bolder fonts and darker colors to make it stand out more from other New Paltz branding.
+          The marketing department saw this being submitted for use and told our organization that we had to follow the restrictions listed above.
+          You can see below what I ended up with, still attempting to keep some of the vision of the original and using shape to make it stand out more. 
+        </p>
+      </div>
+      <MultiCol>
+        <ImagePopout image={NPEsportsIcon} alt="New Paltz Esports' Icon Logo" w="400px" galleryID="1"/>
+        <ImagePopout image={NPEsportsLogo} alt="New Paltz Esports' Full Logo" w="400px" galleryID="1"/>
+      </MultiCol>
+      <div class="textgroup">
+        <p>
+          From here, since the logo was more homogenous it was about making the branding stand out from the rest of Athletics.
+          I took a similar approach to what we had talked about before and used different shaped lines, stripes, and borders to create a visually distinct style for New Paltz Esports.
+          One main thing I implemented across all works was the use of a grain texture to make everything feel more gritty and rough which to me is what competition feels like,
+          along with using mostly the Dark Blue as a background where most campus orgs use white as a background when working with the style guide.
+          These things to me help give New Paltz Esports its own unique identity at New Paltz.
+        </p>
+      </div>
+      <MultiCol>
+        <ImagePopout image={Thumb} alt="Mid Hudson Mayhem's icon logo" w="700px" galleryID="1"/>
+      </MultiCol>
+      <div class="textgroup">
+        <p>
+          This experience is one that designers for Esports in collegiate spaces have to deal with all over the country.
+          With Esports being very niche and unsupported by colleges it has forced designers in the space to get very creative in standing out from other
+          organizations on their campus’ and allowed them to truly branch out and create many unique works.
+        </p>
+      </div>
+  <Footer />
+</Layout>
+
+<script>
+</script>
+
+<style>
+  .page-contain{
+    display: flex;
+    align-items: top;
+    /* grid-template-columns: 650px 1fr; */
+    justify-content: center;
+    margin: var(--size-page-margin) 0;
+  }
+  .content-contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 3rem;
+    background-color: var(--color-background);
+    height: 100%;
+    padding: 3rem;
+    padding-top: 8rem;
+    max-width: 1200px;
+  }
+  .content-contain p { max-width: 800px; }
+  .textgroup h2 { color: var(--color-text); font-family: var(--font-headings);}
+  .gallery-contain{
+    width: 800px;
+    padding: 1rem;
+    background-color: var(--color-background);
+  }
+  #gallery{
+    position: fixed;
+    padding: 1rem;
+    right: 40px;
+    bottom: 0px;
+    z-index: 1000;
+  }
+  .header{
+    font-size: 48pt;
+    font-weight: 800;
+  }
+
+  .yt-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 800px) {
+    #gallery{
+      transform: scale(60%) translateX(120px) translateY(100px);
+    }
+    p{
+      font-size: 12pt;
+    }
+    .content-contain{
+      padding: 1rem;
+    }
+  }
+</style>
