@@ -10,6 +10,7 @@ import Nav from "@components/Nav.astro"
 import Footer from "@components/Footer.astro"
 
 import Thumb from './thumbnail.png';
+import BrandGuide from './brand-guide.pdf';
 import NPEsportsI1 from './npesports-iteration1.png';
 import NPEsportsLogo from './npesports-logo.png';
 import NPEsportsIcon from './npesports-icon.png';
@@ -142,8 +143,21 @@ import SkipLink from "@components/SkipLink.astro";
           These things to me help give New Paltz Esports its own unique identity at New Paltz.
         </p>
       </div>
+      <div class="textgroup">
+        <p>
+          Lastly here you can see a short brand guidelines I made for New Paltz Esports in order to visually encompass all of what I had been saying.
+          It defines the style of the program and emphasizes this interesting dichotomy. Theres a need to both show to outside organizations and schools
+          that we represent New Paltz in the Esports space but at the same time not fall into the trap of blending in with all the other New Paltz organizations
+          to the rest of the student body. You can see how I tackled those problems as well as the overall style in the Brand Guidelines below.
+        </p>
+      </div>
       <MultiCol>
-        <ImagePopout image={Thumb} alt="Mid Hudson Mayhem's icon logo" w="700px" galleryID="1"/>
+        <embed 
+          src={BrandGuide} 
+          type="application/pdf" 
+          width="100%" 
+          height="800px" 
+        />
       </MultiCol>
       <div class="textgroup">
         <p>
