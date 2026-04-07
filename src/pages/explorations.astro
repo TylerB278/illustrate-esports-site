@@ -9,12 +9,21 @@ import Image from "astro/components/Image.astro";
 
 import Logo from './MainLogo.png';
 import Event from '@assets/images/EventCase-Cover.png';
-import EventText from '@assets/images/eventText.png';
+import EventText from '@assets/images/EventCase-Text.png';
+import Collegiate from '@assets/images/CollegiateCase-Cover.png';
+import CollegiateText from '@assets/images/CollegiateCase-Text.png';
+import Composite from '@assets/images/3DCase-Cover.png';
+import CompositeText from '@assets/images/3DCase-Cover.png';
 
 import ImagePopout from "@components/ImagePopout.astro";
 import StaticGraphic from "@components/StaticGraphic.astro";
-import FTF1 from "@assets/images/ftfStatic1.png"
-import FTF2 from "@assets/images/ftfStatic2.png"
+import FTF1 from "@assets/images/fist1.png"
+import FTF2 from "@assets/images/fist2.png"
+import Hawk1 from "@assets/images/hawk5.png"
+import Hawk2 from "@assets/images/hawk6.png"
+import Cube1 from "@assets/images/cube1.png"
+import Cube2 from "@assets/images/cube2.png"
+
 
 import Nav from "@components/Nav.astro"
 import Footer from "@components/Footer.astro"
@@ -25,25 +34,35 @@ import ProjectButton from "@components/ProjectButton.astro";
 <Layout title="Esports Visualized">
   <Nav />
   <!-- <div class="fullBG"></div> -->
-  <StaticGraphic i1={FTF1} i2={FTF2} l="100px" t="15vh" w="12vw"/>
   <div class="caseFlex">
     <a class="caseBox event" href="/event/event">
       <Image alt="" class="background" src={EventText} />
+      <div class="symbol">
+        <StaticGraphic i1={FTF1} i2={FTF2} l="30%" t="-10%" w="40%"/>
+      </div>
       <Image alt="" class="overlay" src={Event} />
     </a>
     <a class="caseBox collegiate" href="/collegiate/collegiate">
-      <Image alt="" class="background" src={EventText} />
-      <Image alt="" class="overlay" src={Event} />
+      <Image alt="" class="background" src={CollegiateText} />
+      <div class="symbol">
+        <StaticGraphic i1={Hawk1} i2={Hawk2} l="30%" t="-10%" w="40%"/>
+      </div>
+      <Image alt="" class="overlay" src={Collegiate} />
     </a>
     <div class="caseBox">
-      <Image alt="" class="background" src={EventText} />
-      <Image alt="" class="overlay" src={Event} />
+      <Image alt="" class="background" src={CompositeText} />
+      <div class="symbol">
+        <StaticGraphic i1={Cube1} i2={Cube2} l="30%" t="-10%" w="40%"/>
+      </div>
+      <Image alt="" class="overlay" src={Composite} />
     </div>
   </div>
   <!-- <Container>
 
   </Container> -->
-  <Footer />
+  <div class="foot">
+    <Footer />
+  </div>
 </Layout>
 
 <script></script>
@@ -61,7 +80,7 @@ import ProjectButton from "@components/ProjectButton.astro";
 
 .caseFlex{
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 100px;
@@ -73,12 +92,12 @@ import ProjectButton from "@components/ProjectButton.astro";
 .caseBox{
   position: relative;
   display: flex;
-  max-width: 800px;
+  max-width: 600px;
   justify-content: center;
   /* border: 5px solid white; */
   transition: all 0.5s;
   margin: 20px;
-
+  scale: 150%;
 }
 
 .background{
@@ -101,9 +120,19 @@ import ProjectButton from "@components/ProjectButton.astro";
   transition: all 0.4s;
 }
 
+.symbol{ transition: all 0.5s; z-index: -1; }
+
 .caseBox:hover .background{ scale: 120%; }
 .caseBox:hover .overlay{ transform: scale(100%); }
+.caseBox:hover .symbol{ opacity: 0%; }
 
-.caseBox:hover .fullBG{ opacity: 100%; }
+.foot{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
 
+@media (max-width: 1379px){
+  .caseBox{ scale: 110%; }
+}
 </style>
