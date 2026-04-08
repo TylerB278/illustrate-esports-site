@@ -97,7 +97,7 @@ import ProjectButton from "@components/ProjectButton.astro";
   /* border: 5px solid white; */
   transition: all 0.5s;
   margin: 20px;
-  scale: 150%;
+  
 }
 
 .background{
@@ -105,6 +105,7 @@ import ProjectButton from "@components/ProjectButton.astro";
   align-self: center;
   width: 60%;
   transition: all 0.2s;
+  scale: 180%;
 }
 
 .overlay{
@@ -122,8 +123,8 @@ import ProjectButton from "@components/ProjectButton.astro";
 
 .symbol{ transition: all 0.5s; z-index: -1; }
 
-.caseBox:hover .background{ scale: 120%; }
-.caseBox:hover .overlay{ transform: scale(100%); }
+.caseBox:hover .background{ scale: 200%; }
+.caseBox:hover .overlay{ transform: scale(150%); }
 .caseBox:hover .symbol{ opacity: 0%; }
 
 .foot{
@@ -133,6 +134,6 @@ import ProjectButton from "@components/ProjectButton.astro";
 }
 
 @media (max-width: 1379px){
-  .caseBox{ scale: 110%; }
+  .caseBox{ max-width: 400px; }
 }
 </style>
