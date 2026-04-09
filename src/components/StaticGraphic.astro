@@ -12,8 +12,8 @@ const { r } = Astro.props;
 ---
 
 <div class="imgFit">
-  <Image class="image-component main" alt=`` src={i1} style=`width: ${w}; top: ${t}; bottom: ${b}; left: ${l}; right: ${r};`/>
-  <Image class="image-component alt" alt=`` src={i2} style=`width: ${w}; top: ${t}; bottom: ${b}; left: ${l}; right: ${r};`/>
+  <Image class="image-component main" alt=`` src={i1} width={500} style=`width: ${w}; top: ${t}; bottom: ${b}; left: ${l}; right: ${r};`/>
+  <Image class="image-component alt" alt=`` src={i2} width={500} style=`width: ${w}; top: ${t}; bottom: ${b}; left: ${l}; right: ${r};`/>
 </div>
 <style>
   .image-component {
