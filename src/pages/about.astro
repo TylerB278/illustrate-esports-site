@@ -7,7 +7,7 @@ import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Assets } from "astro:assets";
 import Image from "astro/components/Image.astro";
 
-import Logo from './MainLogo.png';
+import Logo from './MainLogo.svg';
 
 import ImagePopout from "@components/ImagePopout.astro";
 
@@ -23,7 +23,7 @@ import ProjectButton from "@components/ProjectButton.astro";
   <div style=" margin: 100px; "></div>
   <Container>
     <div class="about">
-        <ImagePopout image={Logo} alt="logo for Esports Visualized" />
+        <Image src={Logo} alt="logo for Esports Visualized" width={800} />
         <h1>About the Project</h1>
         <p>
           My name is Tyler Boggi and I have been designing for the Esports space for 3 years now from clubs, to organizations, and beyond.
