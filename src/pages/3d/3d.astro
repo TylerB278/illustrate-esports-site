@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import ImagePopout from "@components/ImagePopout.astro";
+import StaticGraphic from "@components/StaticGraphic.astro";
+import MultiCol from "@components/MultiCol.astro";
+import Gap from "@components/Gap.astro";
+import Nav from "@components/Nav.astro"
+import Footer from "@components/Footer.astro"
+
+import Thumb from './thumbnail.png';
+import ThumbText from './thumbnail-text.png';
+import Gallery from '@assets/images/galleryText.png';
+import GalBG1 from "@assets/images/gallery1.png"
+import GalBG2 from "@assets/images/gallery2.png"
+import DrewTwitch from './drew-twitch.png';
+import DrewRender from './drew-render.png';
+import SkipLink from "@components/SkipLink.astro";
+
+---
+
+<Layout title= "Event Design">
+  <Nav />
+  <div id="gallery">
+    <ImagePopout 
+      image={Gallery} 
+      alt="Opener for the image gallery" 
+      w="300px" 
+      galleryID="1"
+    />
+    <StaticGraphic 
+      i1={GalBG1} 
+      i2={GalBG2} 
+      b="70px" 
+      r="80px" 
+      w="180px"
+    />
+  </div>
+
+  <div class="content-contain">
+    <ImagePopout image={ThumbText} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
+    <div class="textgroup">
+      <p>
+        For this project I took on two 3D based assignments, the first one I’d like to talk about is a twitch banner I did for a Twitch streamer named Drewsephix. When talking about the use of 3D in Esports,
+        oftentimes it comes down to the fact that in Esports players are frequently represented by the character that they play in their respective games.
+        As such, a lot of graphics focusing on these players also implement the character they play in some way. The most organic-looking way to do this is through what is called 3D rigging and 3D compositing.
+        3D rigging involves taking the model of a character and its “skeleton”, which is what animators use to pose a 3D model, and posing it in a way that translates well for the graphic. 3D compositing is using the engine’s
+        lighting and texture tools to produce a final render that matches or mimics the lighting and coloring of the design it is being used for.
+      </p>
+    </div>
+    <div class="textgroup">
+      <p>
+        For this first project I am working with the model of “Orcane” from the game “Rivals of Aether 2” for the purposes of creating a profile banner image.
+        Instead of directly explaining the steps to you here, check out the timelapse I have linked below to see my process!
+      </p>
+    </div>
+    <iframe
+      width="1080" 
+      height="720" 
+      src="https://www.youtube.com/embed/FENQ91GEr_g" 
+      class="yt-video"
+      title="Drewsephix Banner Timelapse - Esports Visualized" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+    <div class="textgroup">
+      <p>
+        The timelapse above shows the general process. Take the model, pose it how you’d like, make the colors and lighting match, and then render it out to use in your design!
+        For this design we were sticking with a simpler color scheme aligning with the red and black on the character which allowed me to be a lot more loose with the lighting in the 3D software.
+        You can see how the final banner turned out below and what the character render alone came out as!
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={DrewTwitch} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="1"/>
+    </MultiCol>
+    <MultiCol>
+      <ImagePopout image={DrewRender} alt="New Paltz Esports' Icon Logo" w="600px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        Blablabla Drewsephix
+      </p>
+    </div>
+    <div class="textgroup">
+      <p>
+        My next project takes the same principles and turns things up to include a few more characters and lighting techniques to show how far 3D Compositing can truly go.
+      </p>
+    </div>
+    
+  <Footer />
+</Layout>
+
+<script>
+</script>
+
+<style>
+  .page-contain{
+    display: flex;
+    align-items: top;
+    /* grid-template-columns: 650px 1fr; */
+    justify-content: center;
+    margin: var(--size-page-margin) 0;
+  }
+  .content-contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 3rem;
+    background-color: var(--color-background);
+    height: 100%;
+    padding: 3rem;
+    padding-top: 8rem;
+    max-width: 1200px;
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    animation: Open 1s both;
+  }
+  .content-contain p { max-width: 800px; }
+
+  @keyframes Open{
+    0%    { clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); }
+    100%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  }
+
+  .textgroup h2 { color: var(--color-text); font-family: var(--font-headings);}
+  .gallery-contain{
+    width: 800px;
+    padding: 1rem;
+    background-color: var(--color-background);
+  }
+  #gallery{
+    position: fixed;
+    padding: 1rem;
+    right: 40px;
+    bottom: 0px;
+    z-index: 1000;
+  }
+  .header{
+    font-size: 48pt;
+    font-weight: 800;
+  }
+
+  .yt-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 800px) {
+    #gallery{
+      transform: scale(60%) translateX(120px) translateY(100px);
+    }
+    p{
+      font-size: 12pt;
+    }
+    .content-contain{
+      padding: 1rem;
+    }
+  }
+</style>
