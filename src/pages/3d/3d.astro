@@ -16,6 +16,7 @@ import GalBG1 from "@assets/images/gallery1.png"
 import GalBG2 from "@assets/images/gallery2.png"
 import DrewTwitch from './drew-twitch.png';
 import DrewRender from './drew-render.png';
+import TeamGraphic from './mrblue-graphic.png';
 import SkipLink from "@components/SkipLink.astro";
 
 ---
@@ -83,9 +84,20 @@ import SkipLink from "@components/SkipLink.astro";
     <div class="textgroup">
       <p>
         My next project takes the same principles and turns things up to include a few more characters and lighting techniques to show how far 3D Compositing can truly go.
+        This project is a team graphic for SUNY New Paltz’s Marvel Rivals team. In the game “Marvel Rivals” each team is composed of six players, in this case seven due to a substitute player,
+        and each player can select from loads of different Marvel characters and skins for those characters. In this case I asked each team member for the preferred
+        character and skin they would like on the graphic and compiled a seven-character graphic to showcase the entire team! You can see below the final graphic.
       </p>
     </div>
-    
+    <MultiCol>
+      <ImagePopout image={TeamGraphic} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        With a seven-character graphic like this one rigging and posing all of the individual models would take ages, which is why there’s a much easier way to handle it depending on the game your working with.
+        The easier way involves similar techniques to what we learned before but involves taking animations straight from the game itself as a baseline, thankfully Marvel Rivals is one of the games we can do this with so let me walk you through the process.
+      </p>
+    </div>
   <Footer />
 </Layout>
 
