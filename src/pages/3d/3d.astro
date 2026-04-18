@@ -17,6 +17,12 @@ import GalBG2 from "@assets/images/gallery2.png"
 import DrewTwitch from './drew-twitch.png';
 import DrewRender from './drew-render.png';
 import TeamGraphic from './mrblue-graphic.png';
+import TeamRender from './mrblue-render.png';
+import ModelImport from './hulkimport.png';
+import ModelPose from './hulkpose.png';
+import ModelAdjust from './hulkadjust.png';
+import ModelRender from './hulkrender.png';
+import ModelShowcase from './hulkmodelshowcase.gif';
 import SkipLink from "@components/SkipLink.astro";
 
 ---
@@ -90,7 +96,7 @@ import SkipLink from "@components/SkipLink.astro";
       </p>
     </div>
     <MultiCol>
-      <ImagePopout image={TeamGraphic} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="1"/>
+      <ImagePopout image={TeamGraphic} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="3"/>
     </MultiCol>
     <div class="textgroup">
       <p>
@@ -98,6 +104,70 @@ import SkipLink from "@components/SkipLink.astro";
         The easier way involves similar techniques to what we learned before but involves taking animations straight from the game itself as a baseline, thankfully Marvel Rivals is one of the games we can do this with so let me walk you through the process.
       </p>
     </div>
+    <div class="textgroup">
+      <p>
+        The first step is to import the model into your 3D software of choice. This is similar to how we handled the character in the previous project. For software I use Blender and to get the models from the game I use RivalsPorting.
+        You can see what the imported model looks like below:
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={ModelImport} alt="New Paltz Esports' Icon Logo" w="500px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        Now, instead of posing the entire body of the model, export the character’s animations from wherever you exported the character’s model.
+        Then take those animations and apply them to the skeleton of the character model until you find a pose from one of those animations that you like.
+        This saves you the entire posing process by skipping straight to a mostly finished pose, you can see the one I chose for this Hulk here:
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={ModelPose} alt="New Paltz Esports' Icon Logo" w="500px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        Next, check the animation, make sure you isolate the frame you want and delete the rest. This will allow you to now tweak the pose of the existing animation to your liking,
+        as oftentimes you aren't guaranteed to find the perfect pose out of only the game’s animations. For this instance I move the arms down, made the face point towards the camera and adjusted his facial features.
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={ModelAdjust} alt="New Paltz Esports' Icon Logo" w="500px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        Now lastly we can go in and fix any texture issues that the model may have and set up anything with our lighting and our compositing! Lighting the model is very important to bringing out the pose as shown
+        in the previous project so make sure to carefully consider the context of where the render will go and light accordingly. You can see the rendered image here.
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={ModelRender} alt="New Paltz Esports' Icon Logo" w="700px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        This method cuts what would normally take about an hour per character down to a third of that time. Starting from the baseline of an already competently made animation makes things much easier and
+        due to the nature of 3D these poses and positions are all still completely editable so you’re not under any restrictions using this method either!
+        Lastly here as a showcase of the power of this method, you can see a roundabout of the entire model fully lit.
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={ModelShowcase} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        I used this method on all seven characters for the team graphic, lit them according to the graphic I wanted to place them in, and rendered them as you can see below!
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={TeamRender} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="1"/>
+    </MultiCol>
+    <div class="textgroup">
+      <p>
+        And this of course allowed me to create the final graphic as seen above.
+      </p>
+    </div>
+    <MultiCol>
+      <ImagePopout image={TeamGraphic} alt="New Paltz Esports' Icon Logo" w="800px" galleryID="1"/>
+    </MultiCol>
+
   <Footer />
 </Layout>
 
