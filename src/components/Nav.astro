@@ -3,7 +3,7 @@ import { Assets } from "astro:assets";
 ---
 
 <nav id="navBar">
-    <a href="../"><img class="logo" src="/NavWhite.svg"></img></a>
+    <a class="logo" href="../"></a>
     <div class="links">
         <a href="/about" class="navLink">About</a>
         <a href="/explorations" class="navLink">Case Studies</a>
@@ -60,9 +60,16 @@ window.onscroll = function() {
     } .navLink:hover{ color: var(--color-accent); }
 
     .logo{
+        background-image: url(/NavWhite.svg);
+        background-repeat: no-repeat;
         height: 80px;
+        width: 73px;
         margin-left: 20px;
         margin-right: 20px;
+        transition: 0.3s all;
+    }
+    .logo:hover{
+        background-image: url(/NavColor.svg);
     }
 
     @media (max-width: 600px){

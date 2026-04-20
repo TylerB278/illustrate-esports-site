@@ -24,7 +24,7 @@ import ProjectButton from "@components/ProjectButton.astro";
   <Container>
     <div class="about">
         <Image src={Logo} alt="logo for Esports Visualized" width={800} />
-        <h1>About the Project</h1>
+        <h1 class="header">About the Project</h1>
         <p>
           My name is Tyler Boggi and I have been designing for the Esports space for 3 years now from clubs, to organizations, and beyond.
           It’s a pleasure to be able to showcase everything that I’ve learned here and then some. With this project my goal is to get people
@@ -73,11 +73,23 @@ import ProjectButton from "@components/ProjectButton.astro";
     font-size: 18pt;
     padding: 20px;
   }
-  
+  .header{
+    align-self: center;
+    margin-bottom: 10px;
+    font-size: 48pt;
+    font-weight: 900;
+  }
+
   @media (max-width: 600px){
     .about{
       padding: 0px;
       font-size: 12pt;
+    }
+  }
+
+  @media (max-width: 800px){
+    .header{
+      font-size: clamp(23pt, 8vw, 48pt);
     }
   }
 </style>

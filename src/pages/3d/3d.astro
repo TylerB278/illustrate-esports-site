@@ -46,8 +46,9 @@ import SkipLink from "@components/SkipLink.astro";
   </div>
 
   <div class="content-contain">
-    <ImagePopout image={ThumbText} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
+    <ImagePopout image={Thumb} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
     <div class="textgroup">
+      <h1 class="header">3D Compositing</h1>
       <p>
         For this project I took on two 3D based assignments, the first one I’d like to talk about is a twitch banner I did for a Twitch streamer named Drewsephix. When talking about the use of 3D in Esports,
         oftentimes it comes down to the fact that in Esports players are frequently represented by the character that they play in their respective games.
@@ -230,8 +231,10 @@ import SkipLink from "@components/SkipLink.astro";
     z-index: 1000;
   }
   .header{
-    font-size: 48pt;
-    font-weight: 800;
+    justify-self: center;
+    margin-bottom: 10px;
+    font-size: 60pt;
+    font-weight: 900;
   }
 
   .yt-video {
@@ -249,6 +252,9 @@ import SkipLink from "@components/SkipLink.astro";
     }
     .content-contain{
       padding: 1rem;
+    }
+    .header{
+      font-size: clamp(24pt, 10vw, 48pt);
     }
   }
 </style>

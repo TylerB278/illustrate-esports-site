@@ -9,7 +9,7 @@ import Gap from "@components/Gap.astro";
 import Nav from "@components/Nav.astro"
 import Footer from "@components/Footer.astro"
 
-import Thumb from './thumbnail.png';
+import Thumb from './thumbnail-bg.png';
 import ThumbText from './thumbnail-text.png';
 import Gallery from '@assets/images/galleryText.png';
 import GalBG1 from "@assets/images/gallery1.png"
@@ -58,9 +58,9 @@ import SkipLink from "@components/SkipLink.astro";
   </div>
 
   <div class="content-contain">
-    <ImagePopout image={ThumbText} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
+    <ImagePopout image={Thumb} alt="Event Design Thumbnail" w="100%" galleryID="2"/>
     <div class="textgroup">
-      <!-- <h1 class="header">Event Design</h1> -->
+      <h1 class="header">Event Design</h1>
       <p>
         This breakdown will cover what it is like to design for an Esports event from top to bottom.
         There are a lot of unique aspects that go into designing for an Esports event that you wouldn't normally consider.
@@ -247,8 +247,10 @@ import SkipLink from "@components/SkipLink.astro";
     z-index: 1000;
   }
   .header{
-    font-size: 48pt;
-    font-weight: 800;
+    justify-self: center;
+    margin-bottom: 10px;
+    font-size: 60pt;
+    font-weight: 900;
   }
 
   @media (max-width: 800px) {
@@ -260,6 +262,9 @@ import SkipLink from "@components/SkipLink.astro";
     }
     .content-contain{
       padding: 1rem;
+    }
+    .header{
+      font-size: clamp(24pt, 10vw, 48pt);
     }
   }
 </style>
