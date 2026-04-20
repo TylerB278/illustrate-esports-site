@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import StaticGraphic from "@components/StaticGraphic.astro";
 import SampleComponent from "@components/SampleComponent.astro";
 import Container from "@components/Container.astro";
 import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
@@ -8,7 +9,10 @@ import { Assets } from "astro:assets";
 import { Image } from "astro:assets";
 
 import Logo from './MainLogo.svg';
-
+import Stick1 from "@assets/images/joystick1.png"
+import Stick2 from "@assets/images/joystick2.png"
+import Controller1 from "@assets/images/controller1.png"
+import Controller2 from "@assets/images/controller2.png"
 import ImagePopout from "@components/ImagePopout.astro";
 
 
@@ -21,6 +25,7 @@ import ProjectButton from "@components/ProjectButton.astro";
 <Layout title="Esports Visualized">
   <Nav />
   <div style=" margin: 100px; "></div>
+  
   <Container>
     <div class="about">
         <Image src={Logo} alt="logo for Esports Visualized" width={800} />
@@ -78,6 +83,9 @@ import ProjectButton from "@components/ProjectButton.astro";
     margin-bottom: 10px;
     font-size: 48pt;
     font-weight: 900;
+  }
+  .fixpos{
+    position: fixed;
   }
 
   @media (max-width: 600px){
