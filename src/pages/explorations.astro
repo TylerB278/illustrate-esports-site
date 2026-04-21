@@ -32,8 +32,7 @@ import ProjectButton from "@components/ProjectButton.astro";
 ---
 
 <Layout title="Esports Visualized">
-  <Nav />
-  <!-- <div class="fullBG"></div> -->
+  <Nav hLink="./" />
   <div class="caseFlex">
     <a class="caseBox event" href="/event/event">
       <Image alt="" class="background" src={EventText} width={800} />
@@ -57,9 +56,6 @@ import ProjectButton from "@components/ProjectButton.astro";
       <Image alt="" class="overlay" src={Composite} width={800} />
     </a>
   </div>
-  <!-- <Container>
-
-  </Container> -->
   <div class="foot">
     <Footer />
   </div>
@@ -69,15 +65,6 @@ import ProjectButton from "@components/ProjectButton.astro";
 
 <style>
 
-.fullBG{
-  position: absolute;
-  top: 0;
-  opacity: 0%;
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
-}
-
 .caseFlex{
   display: flex;
   flex-flow: row wrap;
@@ -86,7 +73,6 @@ import ProjectButton from "@components/ProjectButton.astro";
   gap: 100px;
   margin-top: 170px;
   height: 75vh;
-  /* border: 5px solid red; */
 }
 
 .caseBox{
@@ -94,7 +80,6 @@ import ProjectButton from "@components/ProjectButton.astro";
   display: flex;
   max-width: 600px;
   justify-content: center;
-  /* border: 5px solid white; */
   transition: all 0.5s;
   margin: 20px;
   

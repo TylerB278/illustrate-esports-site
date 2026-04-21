@@ -22,13 +22,6 @@ import Controller2 from "@assets/images/controller2.png"
 ---
 
 <Layout title="Esports Visualized">
-  <!-- <nav id="navtop">
-    <a href="../"><img class="logo" src="/NavWhite.png"></img></a>
-    <div class="links">
-      <a href="/about" class="navLink">About</a>
-      <a href="/projects/sample" class="navLink">Breakdowns</a>
-    </div>
-  </nav> -->
   <div class="heroContain">
     <img class="heroImg" src="/MainLogo.svg" />
   </div>
@@ -40,92 +33,21 @@ import Controller2 from "@assets/images/controller2.png"
   <StaticGraphic i1={Crown1} i2={Crown2} r="7%" t="380px" w="11vw"/>
   <StaticGraphic i1={Controller1} i2={Controller2} r="20%" t="100px" w="12vw"/>
   <StaticGraphic i1={Stick1} i2={Stick2} l="7%" t="400px" w="11vw"/>
-  <!-- <Container> -->
-    <!-- <ProjectButton link="event" type="Branding & Logo Design"/> -->
-    <!-- <div class="intro">
-      <p>Esports Visualized is a project dedicated to promoting and growing the community of Esports through graphic design and promotional material! It serves as a resource for any creatives looking to delve into the world of designing for Esports. Take a look through the many breakdowns below dedicated to designing for each different facet of Esports. We hope to encourage people to get involved and interested in this incredible industry.
-      </br> To learn more about this project <a href="/about">click here</a>
-      </br> To learn more about what Esports is <a href="www.wikipedia.com">click here</a></p>
-    </div> -->
-  <!-- </Container> -->
-  <!-- <div id="scrollContain">
-    <div class="arrowL"> &lt </div>
-    <div class="arrowR"> &gt </div>
-    <a class="case" href="/event/event" style="background-image: url(/EventCase-Cover.png); border: none;"></a>
-    <a class="case"></a>
-    <a class="case"></a>
-  </div> -->
-  <Footer />
 </Layout>
 
 <script>
   window.addEventListener('scroll', function() {
   const navbar = document.getElementById('navtop');
-  if (window.scrollY > 120) // Shows after 100px of scrolling
+  if (window.scrollY > 120) 
   { 
     navbar?.classList.add('show');
   } else {
     navbar?.classList.remove('show');
   }
 });
-
- const arrowL = document.querySelector(".arrowL");
- const arrowR = document.querySelector(".arrowR");
- const scrollBox = document.getElementsByClassName(".scrollContain");
-
- const scrollL = function () {
-    // alert("YOU'VE BEEN CLICKED!!");
-    document.getElementById('scrollContain').scrollLeft -= ((document.getElementById('scrollContain').scrollWidth)/4);
- };
-
- const scrollR = function () {
-    // alert("YOU'VE BEEN CLICKED!!");
-    document.getElementById('scrollContain').scrollLeft += ((document.getElementById('scrollContain').scrollWidth)/4);
- };
-
- arrowL?.addEventListener("click", scrollL);
- arrowR?.addEventListener("click", scrollR);
-
 </script>
 
 <style>
-
-  /* navigation styling */
-    nav{
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-    background-color: var(--color-background);
-    z-index: 100;
-  }
-
-  #navtop {
-  top: -100px; /* Hide above the screen */
-  transition: top 0.5s; /* Smooth animation */
-  }
-  #navtop.show {
-    top: 0; /* Slide into view */
-  }
-
-  .links{
-    margin: 20px;
-    align-content: center;
-  }
-  .navLink{
-    /* padding: 20px; */
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-  } .navLink:hover{ color: var(--color-accent); }
-  .logo{
-    width: 80px;
-    margin-left: 20px;
-    padding: 5px;
-  }
 
 /* hero image */
   .heroImg{
@@ -175,75 +97,5 @@ import Controller2 from "@assets/images/controller2.png"
       bottom: 5vh;
     }
   }
-  /*Center Content*/
-  .intro{
-    display: flex;
-  }
-
-  .intro a{
-    color: var(--color-accent);
-  }
-  .intro a:hover{
-    background-color: var(--color-accent);
-    color: var(--color-focus-ring);
-  }
-  .intro a:visited{ color: var(--color-focus-ring); }
-  .intro a:visited:hover{ background-color: var(--color-focus-ring); color: var(--color-accent);}
-
-  /*Scroll Content*/
-
-  .arrowL, .arrowR{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 7vw;
-    height: 35vw;
-    /* background-color: var(--color-accent); */
-    border: 5px solid var(--color-accent);
-    color: var(--color-accent);
-    border-radius: 10px;
-    opacity: 35%;
-    font-size: 10vw;
-    z-index: 0;
-  }
-
-  .arrowL{ left: 1.7vw; }
-  .arrowR{ right: 1.7vw; }
-
-  .arrowL:hover, .arrowR:hover{
-    opacity: 100%;
-  }
-
-  #scrollContain{
-    align-content: center;
-    margin-top: 50px;
-    padding-left: 20vw;
-    margin-bottom: 50px;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    height: 40vw;
-    /* border: 10px solid var(--color-accent); */
-  }
-  .case{
-    display: inline-block;
-    scroll-snap-align: center;
-    width: 70vw;
-    height: 35vw;
-    margin-right: 20vw;
-    border-radius: 20px;
-    border: 10px solid #ff660050;
-    border-opacity: 50;
-
-    background-image: url(/SampleLogo-Full-19.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    transition: all 0.3s;
-  } .case:hover{scale: 102%;}
-
   
 </style>

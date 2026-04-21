@@ -28,7 +28,7 @@ import SkipLink from "@components/SkipLink.astro";
 ---
 
 <Layout title= "Event Design">
-  <Nav />
+  <Nav hLink="../" />
   <div id="gallery">
     <ImagePopout 
       image={Gallery} 
@@ -231,7 +231,7 @@ import SkipLink from "@components/SkipLink.astro";
     z-index: 1000;
   }
   .header{
-    justify-self: center;
+    text-align: center;
     margin-bottom: 10px;
     font-size: 60pt;
     font-weight: 900;

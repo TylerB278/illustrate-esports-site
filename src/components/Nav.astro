@@ -1,9 +1,12 @@
 ---
 import { Assets } from "astro:assets";
+
+const { hLink } = Astro.props;
+
 ---
 
 <nav id="navBar">
-    <a class="logo" href="../"></a>
+    <a class="logo" href={hLink}></a>
     <div class="links">
         <a href="/about" class="navLink">About</a>
         <a href="/explorations" class="navLink">Case Studies</a>
