@@ -45,7 +45,7 @@ import SkipLink from "@components/SkipLink.astro";
     <ImagePopout 
       image={Gallery} 
       alt="Opener for the image gallery" 
-      w="300px" 
+      w="210px" 
       galleryID="1"
     />
     <StaticGraphic 
@@ -53,7 +53,7 @@ import SkipLink from "@components/SkipLink.astro";
       i2={GalBG2} 
       b="70px" 
       r="80px" 
-      w="180px"
+      w="90px"
     />
   </div>
 
@@ -239,13 +239,21 @@ import SkipLink from "@components/SkipLink.astro";
     padding: 1rem;
     background-color: var(--color-background);
   }
+
+  @media (min-width: 600px){
+    #gallery{
+      display: none;
+    }
+  }
+
   #gallery{
     position: fixed;
     padding: 1rem;
     right: 40px;
-    bottom: 0px;
+    top: -40px;
     z-index: 1000;
   }
+  
   .header{
     text-align: center;
     margin-bottom: 10px;

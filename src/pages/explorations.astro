@@ -108,9 +108,11 @@ import ProjectButton from "@components/ProjectButton.astro";
 
 .symbol{ transition: all 0.5s; z-index: -1; }
 
-.caseBox:hover .background{ scale: 200%; }
-.caseBox:hover .overlay{ transform: scale(150%); }
-.caseBox:hover .symbol{ opacity: 0%; }
+@media (min-width: 600px){
+  .caseBox:hover .background{ scale: 200%; }
+  .caseBox:hover .overlay{ transform: scale(150%); }
+  .caseBox:hover .symbol{ opacity: 0%; }
+}
 
 .foot{
   position: fixed;
