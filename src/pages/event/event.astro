@@ -239,13 +239,7 @@ import SkipLink from "@components/SkipLink.astro";
     padding: 1rem;
     background-color: var(--color-background);
   }
-
-  @media (min-width: 600px){
-    #gallery{
-      display: none;
-    }
-  }
-
+  
   #gallery{
     position: fixed;
     padding: 1rem;
@@ -263,7 +257,7 @@ import SkipLink from "@components/SkipLink.astro";
 
   @media (max-width: 800px) {
     #gallery{
-      transform: scale(60%) translateX(120px) translateY(100px);
+      display: none;
     }
     p{
       font-size: 12pt;
