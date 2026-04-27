@@ -50,6 +50,17 @@ import "@fontsource/karla";
     font-weight: 800;
     color: var(--color-accent);
   }
+
+  a{ color: var(--color-accent); }
+  a:visited{ color: var(--color-focus-ring); }
+
+  ::-moz-selection { /* Code for Firefox */
+  background: #ffbb0085;
+  }
+
+  ::selection {
+    background: #ffbb0085;
+  }
   
   /* default focus ring styles */
   *:focus-visible {
