@@ -5,6 +5,7 @@ import Container from "@components/Container.astro";
 import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Assets } from "astro:assets";
+import { Image } from "astro:assets"
 import ProjectButton from "@components/ProjectButton.astro";
 import StaticGraphic from "@components/StaticGraphic.astro";
 import Footer from "@components/Footer.astro"
@@ -18,16 +19,25 @@ import Stick1 from "@assets/images/joystick1.png"
 import Stick2 from "@assets/images/joystick2.png"
 import Controller1 from "@assets/images/controller1.png"
 import Controller2 from "@assets/images/controller2.png"
+import Underline from "@assets/images/siteUnderline.png"
 
 ---
 
 <Layout title="Esports Visualized">
-  <div class="heroContain">
-    <img class="heroImg" src="/MainLogo.svg" />
-  </div>
-  <div class="pageButtons">
-    <a class="button" href="/about">About Esports Visualized</a>
-    <a class="button" href="/explorations">Explore Case Studies</a>
+  <div class="contentContain">
+    <div class="heroContain">
+      <img class="heroImg" src="/MainLogo.svg" />
+    </div>
+    <div class="pageButtons">
+      <a class="button" href="/about">
+          About the Project
+          <Image src={Underline} alt="" class="underline"/>
+      </a>
+      <a class="button" href="/explorations">
+        Explore Case Studies
+        <Image src={Underline} alt="" class="underline"/>
+      </a>
+    </div>
   </div>
   <StaticGraphic i1={Star1} i2={Star2} l="4%" t="50px" w="10vw"/>
   <StaticGraphic i1={Crown1} i2={Crown2} r="7%" t="380px" w="11vw"/>
@@ -48,6 +58,12 @@ import Controller2 from "@assets/images/controller2.png"
 </script>
 
 <style>
+.contentContain{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 /* hero image */
   .heroImg{
@@ -56,12 +72,6 @@ import Controller2 from "@assets/images/controller2.png"
     width: 60vw;
     max-width: 1000px;
     min-width: 300px;
-  }
-
-  @media (max-width: 800px){
-    .heroImg{
-      width: 80vw;
-    }
   }
 
   .heroContain{
@@ -86,6 +96,8 @@ import Controller2 from "@assets/images/controller2.png"
   }
 
   .button{
+    width: 500px;
+    max-width: 90vw;
     font-size: 28pt;
     text-align: center;
     line-height: 1.2;
@@ -93,15 +105,25 @@ import Controller2 from "@assets/images/controller2.png"
     padding: 20px;
     color: var(--color-accent);
     text-decoration: none;
-  } .button:hover{ outline: 5px solid var(--color-accent); }
+  } 
+  /* .button:hover{ outline: 5px solid var(--color-accent); } */
+  .button:hover .underline{ opacity: 100%; }
 
-  @media (max-width: 750px){
+  .underline{
+    width: 100%;
+    opacity: 0%;
+  }
+  
+  @media (max-width: 900px){
     .pageButtons{
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 40px;
       bottom: 5vh;
+    }
+    .heroImg{
+      width: 80vw;
     }
   }
   
