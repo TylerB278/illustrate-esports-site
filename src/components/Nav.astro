@@ -21,9 +21,11 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navBar").style.top = "0";
+    document.getElementById("navBar").classList.remove("top150");
+    document.getElementById("navBar").classList.add("top0");
   } else {
-      document.getElementById("navBar").style.top = "-150px";
+    document.getElementById("navBar").classList.add("top150");
+    document.getElementById("navBar").classList.remove("top0");
   }
 
   // Event buffering here
@@ -38,6 +40,11 @@ window.onscroll = function() {
 <style>
 
     #navBar{ transition: top 0.5s; }
+
+    @media (min-width: 600px){ 
+        .top150{ top: -150px; }
+    }
+    .top0{ top: 0px; }
 
     nav{
         position: fixed;
