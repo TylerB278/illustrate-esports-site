@@ -40,9 +40,16 @@ import Underline from "@assets/images/siteUnderline.png"
     </div>
   </div>
   <StaticGraphic i1={Star1} i2={Star2} l="4%" t="50px" w="10vw"/>
-  <StaticGraphic i1={Crown1} i2={Crown2} r="7%" t="380px" w="11vw"/>
   <StaticGraphic i1={Controller1} i2={Controller2} r="20%" t="100px" w="12vw"/>
-  <StaticGraphic i1={Stick1} i2={Stick2} l="7%" t="400px" w="11vw"/>
+  <div class="desktop">
+    <StaticGraphic i1={Crown1} i2={Crown2} r="7%" t="58vh" w="11vw"/>
+    <StaticGraphic i1={Stick1} i2={Stick2} l="7%" t="60vh" w="11vw"/>
+  </div>
+  <div class="mobile">
+    <StaticGraphic i1={Crown1} i2={Crown2} r="7%" t="45vh" w="11vw"/>
+    <StaticGraphic i1={Stick1} i2={Stick2} l="7%" t="47vh" w="11vw"/>
+  </div>
+
 </Layout>
 
 <script>
@@ -133,4 +140,15 @@ import Underline from "@assets/images/siteUnderline.png"
     }
   }
   
+  .mobile{ display: none; }
+  .desktop{ display: block; }
+  
+  @media (max-width: 600px){
+    .mobile{
+      display: block;
+    }
+    .desktop{
+      display: none;
+    }
+  }
 </style>
