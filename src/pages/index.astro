@@ -75,6 +75,7 @@ import Underline from "@assets/images/siteUnderline.png"
 /* hero image */
   .heroImg{
     position: absolute;
+    transform-origin: center;
     top: 20vh;
     width: clamp(800px, 60vw, 1000px);
     min-width: 300px;
@@ -104,7 +105,7 @@ import Underline from "@assets/images/siteUnderline.png"
   .button{
     width: 500px;
     max-width: 90vw;
-    font-size: 28pt;
+    font-size: 26pt;
     text-align: center;
     line-height: 1.2;
     font-weight: 900;
@@ -149,6 +150,11 @@ import Underline from "@assets/images/siteUnderline.png"
     }
     .desktop{
       display: none;
+    }
+    .button{
+      font-size: 22pt;
+      padding: 0px;
+      line-height: 1;
     }
   }
 </style>
