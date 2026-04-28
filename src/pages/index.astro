@@ -106,11 +106,18 @@ import Underline from "@assets/images/siteUnderline.png"
     text-decoration: none;
   } 
   /* .button:hover{ outline: 5px solid var(--color-accent); } */
-  .button:hover .underline{ opacity: 100%; }
+  .button:hover .underline{ animation: Open 0.4s both; }
 
   .underline{
     width: 100%;
-    opacity: 0%;
+    /* opacity: 0%; */
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    
+  }
+  
+  @keyframes Open{
+    0%    { clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); }
+    100%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   }
   
   @media (max-width: 900px){
