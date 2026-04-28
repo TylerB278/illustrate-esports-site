@@ -32,7 +32,7 @@ import "@fontsource/karla";
 
   /* We can also apply these colors as a default */
   body {
-    background-image: url(/IllustrateEsports-DesignBlog-BackgroundTexture.png);
+    background-image: url(/LongWebBG.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -40,6 +40,11 @@ import "@fontsource/karla";
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-body);
+  }
+  @media (max-width: 600px){
+    body{
+      background-image: url(/MobileWebBG.webp);
+    }
   }
   h1,
   h2,
