@@ -43,10 +43,12 @@ window.onscroll = function() {
 
     @media (min-width: 600px){ 
         .top150{ top: -150px; }
+        .navLink:hover{ color: var(--color-accent); }
     }
     .top0{ top: 0px; }
 
     nav{
+        background: linear-gradient(#0f0021ae, #0f002100);
         position: fixed;
         top: 0px;
         display: flex;
@@ -54,7 +56,7 @@ window.onscroll = function() {
         align-items: center;
         width: 100%;
         /* height: 100px; */
-        margin: 3.5vh;
+        padding: 3.5vh;
         /* margin: 20px; */
         z-index: 1000;
     }
@@ -68,7 +70,7 @@ window.onscroll = function() {
         font-size: 24px;
         text-decoration: none;
         color: var(--color-text);
-    } .navLink:hover{ color: var(--color-accent); }
+    } 
 
     .logo{
         background-image: url(/NavWhite.svg);
@@ -85,7 +87,7 @@ window.onscroll = function() {
 
     @media (max-width: 600px){
         nav{
-            margin: 10px;
+            padding: 10px;
         }
         .navLink{
         padding: 10px;
